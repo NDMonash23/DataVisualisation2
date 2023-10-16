@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>International Travel in Australia | A Visualisation</title>
+
+  <!-- Import Vega & Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+  <!-- JavaScript visualisation embedding script -->
+  <script src="js/vega_lite_vis.js"></script>
+
+  <!-- Import fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="page">
+
+    <div id="title" class="section">
+      <!-- pure grid group: Title -->
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <h1>International Travel in Australia</h1>
+        </div>
+      </div>
+      <!-- end pure grid group -->  
+    </div>
+
+    <div id="intro" class="section">
+      <!-- pure grid group: Intro -->
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <p>It's no secret that Australians love to travel. In fact, Australia ranks in the <span class="bold">top ten nations in the world</span> when it comes to average annual overseas trips per person, with up to <span class="bold">40% of Australians</span> travelling overseas each year.</p>
+        </div>
+        <div class="pure-u-1-2">
+          <p>So what does international air travel in Australia look like? In this visualisation, we take a closer look at where Australians travel <span class="bold">from</span>, where they travel <span class="bold">to</span>, and <span class="bold">how</span> they travel.</p>
+        </div>
+      </div>
+      <!-- end pure grid group -->  
+    </div>
+
+    <div class="section">
+      <!-- pure grid group: From -->
+
+      <div class="section_header">
+        <h1>Where do Australians travel from?</h1>
+      </div>
+
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="description">
+            <h3>Busiest departure cities</h3>
+            <p>
+              So which cities in Australia do people travel overseas from? We would expect the <span class="bold">major cities</span> to have higher international travel traffic compared to <span class="bold">smaller cities</span>. <span class="bold">Major cities</span> also often have larger and more advanced airports, which makes it attractive for airlines to offer more flights out of these airports.
+            </p>
+            <p>
+              The bar chart on the right shows the total number of international flights at cities in Australia. As expected, we can see that the <span class="bold">major cities</span> host far more international flights compared to the <span class="bold">smaller cities</span>, making them the most popular departure cities for Australians travelling overseas.
+            </p>
+          </div>
+        </div>
+        <div class="pure-u-1-2">
+          <br><br>
+          <div id="australian_city_flights_barchart" class="vis-container"></div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+    </div>
+
+    <div class="section">
+      <!-- pure grid groups: To -->
+
+      <div class="section_header">
+        <h1>Where do Australians travel to?</h1>
+      </div>
+
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <br><br>
+          <div id="cities_traffic_proportional_symbol_map" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+          <div class="description">
+            <h3>International city destinations</h3>
+            <p>
+              So which international cities do Australians visit?
+            </p>
+            <p>
+              The proportional symbol map on the left visualises the number of passengers that flew from Australia to different cities around the world. Use the map centre drop down menu to focus on a particular continent, and use the zoom slider to zoom in on the map.
+            </p>
+            <p>
+              We can see that <span class="bold">tourist destinations</span> such as Los Angeles, London, and Bangkok are among the most popular destinations. We can also see that cities such as Singapore, Dubai, and Doha are also visited by many Australians. However, these cities are known to be <span class="bold">hub cities</span>, or cities in which passengers stopover in transit to their final destination. So we can expect that for many of the passengers who flew to these <span class="bold">hub cities</span>, the hub city was not their final destination.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="description">
+            <h3>Global share of Australian flights</h3>
+            <p>
+              The treemap below visualises the global share of all international flights to and from Australia. We see that the majority of flights were between Australia and <span class="asia">Asia</span>, with <span class="oceania">Oceania</span> being the next most popular area of the world. The countries with the most flights to and from Australia include <span class="asia">Singapore</span>, <span class="oceania">New Zealand</span>, the <span class="north_america">United States of America</span>, and the <span class="asia">United Arab Emirates</span>.
+            </p>
+          </div>
+          <div id="country_flights_treemap" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+          <div class="description">
+            <h3>Most popular routes</h3>
+            <p>
+              The sankey diagram below shows the 20 most popular international routes from Australia. As expected, the most popular routes depart from <span class="bold">major cities</span> such as Sydney and Melbourne and arrive at <span class="bold">hub cities</span> such as Singapore and Dubai.
+            </p>
+            <br><br>
+          </div>
+          <div id="popular_routes_sankey_diagram" class="vis-container"></div>
+        </div>
+      </div>
+
+      <!-- end pure grid group -->
+    </div>
+
+    <div class="section">
+      <!-- pure grid groups: How -->
+
+      <div class="section_header">
+        <h1>How do Australians travel?</h1>
+      </div>
+
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="description">
+            <h3>Most popular airlines</h3>
+            <p>
+              So which airlines are Australians choosing for their international travel? The scatterplot below shows the number of flights departing Australia and the number of passengers carried for all airlines servicing Australia. Select a continent using the legend to filter the plot to show only airlines that have their origin at that continent. From the plot, we can see that <span class="asia">Asian airlines</span> are the most popular choice for flying out of Australia. Additionally, many of the popular airlines have their origin at <span class="bold">hub cities</span> in <span class="asia">Asia</span>.
+            </p>
+            <br>
+          </div>
+          <div id="airline_traffic_scatterplot" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+          <div class="description">
+            <h3>Popular aircraft types</h3>
+            <p>
+               Most airlines have a variety of aircraft types which they can deploy for flights to and from Australia. If a route is popular, a <span class="bold">larger aircraft</span> with high capacity such as the Airbus A380 or Boeing 777 might be preferred to smaller aircrafts. If a route covers a longer distance, a <span class="bold">modern aircraft</span> with higher fuel efficiency such as the Airbus A350 or Boeing 787 may be chosen. The heatmap below shows the number of flights for each aircraft type at cities in Australia. We can see that both <span class="bold">large and modern aircrafts</span> are often deployed at the busy <span class="bold">major cities</span> in Australia, while smaller aircrafts fly at the smaller cities.
+            </p>
+          </div>
+          <div id="city_aircraft_type_heatmap" class="vis-container"></div>
+        </div>
+      </div>
+
+      <!-- end pure grid group -->
+    </div>
+
+    <p id="authorship">A visualisation by Nicholas Desa | Data from the Australian Bureau of Infrastructure and Transport Research Economics (BITRE)</p>
+
+  </div> <!-- end page -->
+
+</body>
+</html>

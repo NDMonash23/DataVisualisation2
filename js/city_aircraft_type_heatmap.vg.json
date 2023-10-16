@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "The number of flights of each aircraft type at Australian cities in FY 2022",
+  "width": "container",
+  "height": 400,
+  "padding": {"bottom": 5, "left": 0, "right": 0, "top": 0},
+  "data": {"url": "data/city_aircraft_type_traffic.csv"},
+  "mark": "rect",
+  "encoding": {
+    "y": {"field": "City", "type": "nominal"},
+    "x": {
+      "field": "Aircraft Type", 
+      "type": "nominal",
+      "axis": {"labelAngle": 0}
+    },
+    "color": {"field": "Flights", "type": "quantitative", "scale": {"range": ["#f1eef6", "#df65b0", "#980043"]}},
+    "tooltip": [
+      {"field": "City", "type": "nominal"},
+      {"field": "Aircraft Type", "type": "nominal"},
+      {"field": "Flights", "type": "quantitative", "format": ","}
+    ]
+  },
+  "config": {
+    "axis": {"grid": true, "tickBand": "extent"},
+    "font": "Inter"
+  }
+}

@@ -1,0 +1,107 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 400,
+    "title": "Total international flights at Australian cities in FY 2022",
+    "config": {"font": "Inter"},
+    "data": {"url": "data/australian_city_flight_traffic.csv"},
+    "layer": [
+        {
+            "mark": "bar",
+            "encoding": {
+                "x": {"field": "City", "type": "nominal", "sort": null},
+                "y": {"field": "Flights", "type": "quantitative", "axis": {"grid": false}},
+                "color": {"value": "#662046"},
+                "tooltip": [
+                  {"field": "City", "type": "nominal"},
+                  {"field": "Flights", "type": "quantitative", "format": ","},
+                  {"field": "Passengers", "type": "quantitative", "format": ","}
+                ]
+            }
+        }, 
+        {
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "dy": -5
+            },
+            "encoding": {
+                "x": {"field": "City", "type": "nominal", "sort": null},
+                "y": {"field": "Flights", "type": "quantitative"},
+                "text": {"field": "Flights", "type": "quantitative", "format": ","},
+                "color": {"value": "#000000"},
+                "tooltip": [
+                    {"field": "City", "type": "nominal"},
+                    {"field": "Flights", "type": "quantitative", "format": ","},
+                    {"field": "Passengers", "type": "quantitative", "format": ","}
+                ]
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["Sydney hosts by far the most", "international flights in Australia"],
+                "fontSize": 12,
+                "dx": 95,
+                "dy": -165,
+                "color": "#524f4f"
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["Sydney"],
+                "fontSize": 12,
+                "dx": 33,
+                "dy": -165,
+                "fontWeight":500
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["The four major cities: Sydney,", "Melbourne, Brisbane, and Perth,", "account for almost 93% of all", "international flights in Australia"],
+                "fontSize": 12,
+                "dx": 0,
+                "dy": 0,
+                "color": "#524f4f"
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["93% of all"],
+                "fontSize": 12,
+                "dx": 55,
+                "dy": 28,
+                "fontWeight":500
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["international flights"],
+                "fontSize": 12,
+                "dx": -33,
+                "dy": 42,
+                "fontWeight":500
+            }
+        }
+    ]
+  }

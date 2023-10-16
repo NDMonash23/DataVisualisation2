@@ -1,0 +1,140 @@
+[
+    {
+        "category": "Brisbane",
+        "stack": 1,
+        "sort": 1,
+        "labels": "left"
+      },
+      {
+        "category": "Melbourne",
+        "stack": 1,
+        "sort": 2,
+        "labels": "left",
+        "gap": 15
+      },
+      {
+        "category": "Perth",
+        "stack": 1,
+        "sort": 3,
+        "labels": "left",
+        "gap": 15
+      },
+      {
+        "category": "Sydney", 
+        "stack": 1, 
+        "sort": 4, 
+        "labels": "left",
+        "gap": 15
+      },
+      {"category": "Abu Dhabi", "stack": 2, "sort": 1},
+      {"category": "Auckland", "stack": 2, "sort": 2},
+      {"category": "Denpasar", "stack": 2, "sort": 3},
+      {"category": "Doha", "stack": 2, "sort": 4},
+      {"category": "Dubai", "stack": 2, "sort": 5},
+      {"category": "Honolulu", "stack": 2, "sort": 6},
+      {"category": "London", "stack": 2, "sort": 7},
+      {"category": "Los Angeles", "stack": 2, "sort": 8},
+      {"category": "Nadi", "stack": 2, "sort": 9},
+      {"category": "Singapore", "stack": 2, "sort": 10},
+      {"category": "Vancouver", "stack": 2, "sort": 11},
+      {
+        "source": "Sydney",
+        "destination": "Singapore",
+        "value": 258436
+      },
+      {
+        "source": "Melbourne",
+        "destination": "Singapore",
+        "value": 228588
+      },
+      {
+        "source": "Sydney",
+        "destination": "Dubai",
+        "value": 159644
+      },
+      {
+        "source": "Sydney",
+        "destination": "Los Angeles",
+        "value": 130216
+      },
+      {
+        "source": "Melbourne",
+        "destination": "Dubai",
+        "value": 123579
+      },
+      {
+        "source": "Perth",
+        "destination": "Singapore",
+        "value": 120109
+      },
+      {
+        "source": "Sydney",
+        "destination": "Nadi",
+        "value": 113806
+      },
+      {
+        "source": "Brisbane",
+        "destination": "Singapore",
+        "value": 107512
+      },
+      {
+        "source": "Sydney",
+        "destination": "Auckland",
+        "value": 100475
+      },
+      {
+        "source": "Melbourne",
+        "destination": "Auckland",
+        "value": 87203
+      },
+      {
+        "source": "Sydney",
+        "destination": "Doha",
+        "value": 79097
+      },
+      {
+        "source": "Brisbane",
+        "destination": "Dubai",
+        "value": 70354
+      },
+      {
+        "source": "Melbourne",
+        "destination": "Doha",
+        "value": 69105
+      },
+      {
+        "source": "Brisbane",
+        "destination": "Auckland",
+        "value": 66547
+      },
+      {
+        "source": "Sydney",
+        "destination": "Abu Dhabi",
+        "value": 54800
+      },
+      {
+        "source": "Sydney",
+        "destination": "Honolulu",
+        "value": 53588
+      },
+      {
+        "source": "Melbourne",
+        "destination": "Abu Dhabi",
+        "value": 50433
+      },
+      {
+        "source": "Sydney",
+        "destination": "London",
+        "value": 49540
+      },
+      {
+        "source": "Sydney",
+        "destination": "Vancouver",
+        "value": 49167
+      },
+      {
+        "source": "Melbourne",
+        "destination": "Denpasar",
+        "value": 45836
+      }
+]

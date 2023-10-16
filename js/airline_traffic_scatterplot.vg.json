@@ -1,0 +1,199 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 400,
+    "padding": {"bottom": 5, "left": 0, "right": 30, "top": 0},
+    "title": "Flights vs passengers for airlines flying out of Australia in FY 2022",
+    "config": {"font": "Inter"},
+    "data": {"url": "data/airline_traffic.csv"},
+    "layer": [
+        {
+            "params":[
+                {
+                "name": "continent_highlight",
+                "select": {"type": "point", "fields": ["Origin"]},
+                "bind": "legend"
+                }
+            ],
+            "mark": "point",
+            "encoding": {
+                "x": {
+                    "field": "Outbound Flights", 
+                    "type": "quantitative",
+                    "title": "Flights",
+                    "axis": {"grid": false}
+                },
+                "y": {
+                    "field": "Outbound Passengers", 
+                    "type": "quantitative",
+                    "title": "Passengers",
+                    "scale": {"domain": [0, 600000]},
+                    "axis": {"grid": false}
+                },
+                "color": {
+                    "field": "Origin",
+                    "type": "nominal",
+                    "scale": {
+                        "domain": [
+                            "Asia",
+                            "Oceania",
+                            "North America",
+                            "Europe",
+                            "South America"
+                        ],
+                        "range": [
+                            "#bebada",
+                            "#8dd3c7",
+                            "#80b1d3",
+                            "#fb8072",
+                            "#fdb462"
+                        ]
+                    },
+                    "legend": {"title": "Airline Origin Continent", "orient": "top-left"}
+                },
+                "size": {"value": 100},
+                "opacity": {
+                    "condition": {"param": "continent_highlight", "value": 1},
+                    "value": 0.1
+                },            
+                "tooltip": [
+                    {"field": "Airline", "type": "nominal"},
+                    {"field": "Outbound Flights", "type": "quantitative", "title": "Flights", "format": ","},
+                    {"field": "Outbound Passengers", "type": "quantitative", "title": "Passengers", "format": ","}
+                ]
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["The majority of airlines operated", "less than 1,500 flights, carrying", "less than 150,000 passengers"],
+                "dx": -10,
+                "dy": 105,
+                "fontSize": 12,
+                "color": "#524f4f"
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["less than 1,500 flights"],
+                "dx": -37,
+                "dy": 119,
+                "fontSize": 12,
+                "fontWeight": 500
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["less than 150,000 passengers"],
+                "dx": -10,
+                "dy": 133,
+                "fontSize": 12,
+                "fontWeight": 500
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["Singapore Airlines and Qantas Airways were", "well ahead of other airlines, flying more than", "twice as many flights as their closest competitor"],
+                "dx": 90,
+                "dy": -115,
+                "fontSize": 12,
+                "color": "#524f4f"
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["Singapore Airlines"],
+                "dx": 16,
+                "dy": -115,
+                "fontSize": 12,
+                "fontWeight": 500
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["Qantas Airways"],
+                "dx": 140,
+                "dy": -115,
+                "fontSize": 12,
+                "fontWeight": 500
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "text": ["twice as many flights"],
+                "dx": 13,
+                "dy": -87,
+                "fontSize": 12,
+                "fontWeight": 500
+            }
+        },
+        {
+            "data": {
+                "values": [
+                  {
+                    "Airline": "Qantas Airways",
+                    "Outbound Flights": 4802,
+                    "Outbound Passengers": 529191 
+                  },
+                  {
+                    "Airline": "Singapore Airlines",
+                    "Outbound Flights": 4707,
+                    "Outbound Passengers": 543178
+                  }
+                ]
+            },
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": -12,
+                "fontSize": 10,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Outbound Flights", 
+                    "type": "quantitative"
+                },
+                "y": {
+                    "field": "Outbound Passengers", 
+                    "type": "quantitative"
+                },
+                "text": {"field": "Airline", "type": "nominal"},
+                "color": {"value": "black"},
+                "tooltip": [
+                    {"field": "Airline", "type": "nominal"},
+                    {"field": "Outbound Flights", "type": "quantitative", "title": "Flights", "format": ","},
+                    {"field": "Outbound Passengers", "type": "quantitative", "title": "Passengers", "format": ","}
+                ]
+            }
+        }
+    ]
+}

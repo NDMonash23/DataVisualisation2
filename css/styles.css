@@ -1,0 +1,101 @@
+.page {
+    background-color: white;
+    color: #524f4f;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    color: #524f4f;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.asia {
+    font-weight: bold;
+    color: #bebada;
+}
+
+.oceania {
+    font-weight: bold;
+    color: #8dd3c7;
+}
+
+.north_america {
+    font-weight: bold;
+    color: #80b1d3;
+}
+
+.section {
+    margin-left: 20px; 
+    margin-right: 20px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-sizing: border-box; 
+    border: 5px solid #662046;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: 'Inter', sans-serif;
+}
+
+.section_header {
+    background-color: #662046;
+    color: white;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#title {
+    background-color: #662046;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    padding: 0;
+}
+
+#intro {
+    border: none;
+    font-size: 22px;
+    padding: 0;
+}
+
+.description {
+    font-size: 20px;
+}
+
+.vis-container {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    color: #524f4f;
+}
+
+.pure-g {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#authorship {
+    text-align: center;
+}

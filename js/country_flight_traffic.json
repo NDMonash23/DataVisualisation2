@@ -1,0 +1,191 @@
+[
+    {
+        "id": 1
+    },
+    {
+        "id": 2,
+        "name": "Africa",
+        "parent": 1
+    },
+    {
+        "id": 3,
+        "name": "Asia",
+        "parent": 1
+    },
+    {
+        "id": 4,
+        "name": "Europe",
+        "parent": 1
+    },
+    {
+        "id": 5,
+        "name": "North America",
+        "parent": 1
+    },
+    {
+        "id": 6,
+        "name": "Unspecified",
+        "parent": 1
+    },
+    {
+        "id": 7,
+        "name": "Oceania",
+        "parent": 1
+    },
+    {
+        "id": 8,
+        "name": "South Africa",
+        "parent": 2,
+        "size": 182
+    },
+    {
+        "id": "9",
+        "name": "Singapore",
+        "parent": 3,
+        "size": 11746
+    },
+    {
+        "id": "10",
+        "name": "United Arab Emirates",
+        "parent": 3,
+        "size": 3494
+    },
+    {
+        "id": "11",
+        "name": "Qatar",
+        "parent": 3,
+        "size": 2398
+    },
+    {
+        "id": "12",
+        "name": "Indonesia",
+        "parent": 3,
+        "size": 1467
+    },
+    {
+        "id": "13",
+        "name": "India",
+        "parent": 3,
+        "size": 980
+    },
+    {
+        "id": "14",
+        "name": "Thailand",
+        "parent": 3,
+        "size": 1129
+    },
+    {
+        "id": "15",
+        "name": "Sri Lanka",
+        "parent": 3,
+        "size": 731
+    },
+    {
+        "id": "16",
+        "name": "Malaysia",
+        "parent": 3,
+        "size": 983
+    },
+    {
+        "id": "17",
+        "name": "Vietnam",
+        "parent": 3,
+        "size": 600
+    },
+    {
+        "id": "18",
+        "name": "Philippines",
+        "parent": 3,
+        "size": 635
+    },
+    {
+        "id": "19",
+        "name": "China",
+        "parent": 3,
+        "size": 501
+    },
+    {
+        "id": "20",
+        "name": "Japan",
+        "parent": 3,
+        "size": 919
+    },
+    {
+        "id": "21",
+        "name": "Hong Kong",
+        "parent": 3,
+        "size": 1437
+    },
+    {
+        "id": "22",
+        "name": "Korea",
+        "parent": 3,
+        "size": 316
+    },
+    {
+        "id": "23",
+        "name": "Taiwan",
+        "parent": 3,
+        "size": 274
+    },
+    {
+        "id": "24",
+        "name": "UK",
+        "parent": 4,
+        "size": 756
+    },
+    {
+        "id": "25",
+        "name": "USA",
+        "parent": 5,
+        "size": 4050
+    },
+    {
+        "id": "26",
+        "name": "Canada",
+        "parent": 5,
+        "size": 446
+    },
+    {
+        "id": "27",
+        "name": "Other",
+        "parent": 6,
+        "size": 351
+    },
+    {
+        "id": "28",
+        "name": "New Zealand",
+        "parent": 7,
+        "size": 5221
+    },
+    {
+        "id": "29",
+        "name": "Fiji",
+        "parent": 7,
+        "size": 2483
+    },
+    {
+        "id": "30",
+        "name": "Papua New Guinea",
+        "parent": 7,
+        "size": 938
+    },
+    {
+        "id": "31",
+        "name": "New Caledonia",
+        "parent": 7,
+        "size": 317
+    },
+    {
+        "id": "32",
+        "name": "Solomon Islands",
+        "parent": 7,
+        "size": 110
+    },
+    {
+        "id": "33",
+        "name": "Vanuatu",
+        "parent": 7,
+        "size": 94
+    }
+]

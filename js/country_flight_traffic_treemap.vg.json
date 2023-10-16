@@ -1,0 +1,163 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "title": {"text": "The global share of flights to and from Australia in FY 2022"},
+  "width": 525,
+  "height": 500,
+  "padding": {"bottom": 0, "left": 0, "right": 0, "top": 0},
+  "autosize":{"type": "fit"},
+  "config": {"text": {"font": "Inter"}},
+  "signals": [
+    { 
+      "name": "width",
+      "value": 525,
+      "on": [
+        {
+          "events": "window:resize",
+          "update": "windowSize()[0] * 0.4"
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "tree",
+      "url": "js/country_flight_traffic.json",
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "size",
+          "sort": {"field": "value"},
+          "round": true,
+          "method": "squarify",
+          "ratio": 1.6,
+          "size": [{"signal": "width"}, {"signal": "height"}]
+        }
+      ]
+    },
+    {
+      "name": "nodes",
+      "source": "tree",
+      "transform": [{ "type": "filter", "expr": "datum.children" }]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [{ "type": "filter", "expr": "!datum.children" }]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "nodes", "field": "name"},
+      "range": [
+        "#8dd3c7",
+        "#ffffb3",
+        "#bebada",
+        "#fb8072",
+        "#80b1d3",
+        "#808080"
+      ]
+    },
+    {
+      "name": "size",
+      "type": "ordinal",
+      "domain": [0, 1, 2, 3],
+      "range": [256, 28, 20, 14]
+    },
+    {
+      "name": "opacity",
+      "type": "ordinal",
+      "domain": [0, 1, 2, 3],
+      "range": [0.15, 0.5, 0.8, 1.0]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "nodes"},
+      "interactive": false,
+      "encode": {
+        "enter": {
+          "fill": {"scale": "color", "field": "name"}
+        },
+        "update": {
+          "x": {"field": "x0"},
+          "y": {"field": "y0"},
+          "x2": {"field": "x1"},
+          "y2": {"field": "y1"}
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {"data": "leaves"},
+      "encode": {
+        "enter": {
+          "stroke": {"value": "#fff"},
+          "tooltip": {"signal": "{'Country': datum.name, 'Flights': datum.size}"}
+        },
+        "update": {
+          "x": {"field": "x0"},
+          "y": {"field": "y0"},
+          "x2": {"field": "x1"},
+          "y2": {"field": "y1"},
+          "fill": {"value": "transparent"}
+        },
+        "hover": {
+          "fill": {"value": "#662046"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "leaves"},
+      "interactive": false,
+      "encode": {
+        "enter": {
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fill": {"value": "#000"},
+          "text": {"field": "name"},
+          "fontSize": {"value": 10},
+          "fillOpacity": {"scale": "opacity", "field": "depth"}
+        },
+        "update": {
+          "x": {"signal": "0.5 * (datum.x0 + datum.x1)"},
+          "y": {"signal": "0.5 * (datum.y0 + datum.y1)"}
+        }
+      }
+    }
+  ],
+
+  "legends": [
+    {
+      "fill": "color",
+      "title": "Continent:",
+      "titleOrient": "left",
+      "orient":"bottom",
+      "encode": {
+        "symbols": {"enter": {"fillOpacity": {"value": 1}}},
+        "labels": {"update": {"text": {"field": "value"}}}
+      },
+      "values": [
+        "Asia",
+        "Oceania",
+        "North America",
+        "Europe",
+        "Africa",
+        "Unspecified"
+      ],
+      "direction": "horizontal",
+      "symbolType": "square",
+      "symbolSize": 300
+    }
+  ]
+}

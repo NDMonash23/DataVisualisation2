@@ -1,0 +1,73 @@
+City,Aircraft Type,Flights
+Adelaide,A320S,109
+Adelaide,A330,418
+Adelaide,A350,724
+Adelaide,A380,0
+Adelaide,B737,0
+Adelaide,B767,0
+Adelaide,B777,203
+Adelaide,B787,0
+Brisbane,A320S,748
+Brisbane,A330,1301
+Brisbane,A350,1891
+Brisbane,A380,243
+Brisbane,B737,956
+Brisbane,B767,556
+Brisbane,B777,921
+Brisbane,B787,1597
+Cairns,A320S,55
+Cairns,A330,766
+Cairns,A350,55
+Cairns,A380,0
+Cairns,B737,100
+Cairns,B767,36
+Cairns,B777,0
+Cairns,B787,0
+Darwin,A320S,196
+Darwin,A330,28
+Darwin,A350,28
+Darwin,A380,0
+Darwin,B737,86
+Darwin,B767,0
+Darwin,B777,0
+Darwin,B787,1388
+Gold Coast,A320S,410
+Gold Coast,A330,0
+Gold Coast,A350,0
+Gold Coast,A380,0
+Gold Coast,B737,6
+Gold Coast,B767,0
+Gold Coast,B777,0
+Gold Coast,B787,123
+Hobart,A320S,16
+Hobart,A330,0
+Hobart,A350,10
+Hobart,A380,0
+Hobart,B737,0
+Hobart,B767,0
+Hobart,B777,0
+Hobart,B787,0
+Melbourne,A320S,760
+Melbourne,A330,3493
+Melbourne,A350,3524
+Melbourne,A380,491
+Melbourne,B737,1003
+Melbourne,B767,0
+Melbourne,B777,1148
+Melbourne,B787,5641
+Perth,A320S,376
+Perth,A330,593
+Perth,A350,768
+Perth,A380,0
+Perth,B737,180
+Perth,B767,0
+Perth,B777,620
+Perth,B787,2782
+Sydney,A320S,878
+Sydney,A330,8211
+Sydney,A350,4674
+Sydney,A380,1415
+Sydney,B737,1632
+Sydney,B767,61
+Sydney,B777,3494
+Sydney,B787,7448
